@@ -1,0 +1,35 @@
+Name: Kostantinos
+Surname: Chaidemenos
+ID: sdi2200262
+Semester: 2
+
+Name: Lefteris
+Surname: Konomis
+ID: sdi2200244
+Semester: 2
+
+Name: John
+Surname: Doe
+ID: 1doe
+Semester: 2
+
+Name: Jason
+Surname: Doe
+ID: 2doe
+Semester: 2
+
+Name: Jared
+Surname: Doe
+ID: 3doe
+Semester: 2
+
+Name: Jim
+Surname: Doe
+ID: 4doe
+Semester: 2
+
+Name: Jamal
+Surname: Doe
+ID: 5doe
+Semester: 2
+

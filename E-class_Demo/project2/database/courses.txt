@@ -1,0 +1,30 @@
+Name: Chemistry
+ECTS: 20
+Semester: 1
+Role: 1
+
+Name: Basketball
+ECTS: 10
+Semester: 1
+Role: 0
+
+Name: Physics
+ECTS: 20
+Semester: 1
+Role: 1
+
+Name: Spanish
+ECTS: 20
+Semester: 2
+Role: 0
+
+Name: Coding
+ECTS: 69
+Semester: 2
+Role: 1
+
+Name: Religions
+ECTS: 15
+Semester: 2
+Role: 0
+

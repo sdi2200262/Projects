@@ -1,0 +1,109 @@
+Κωνσταντίνος Χαϊδεμένος / Konstantinos Chaidemenos
+sdi2200262
+
+Ελευθέριος Κονόμης / Eleftherios Konomis
+sdi2200244
+
+Η εργασία είναι ολοκληρωμένη με ότι ζητείται από την εκφώνηση:
+
+Στο αρχείο classes.hpp βρίσκονται οι κλάσεις τις οποίες αξιοποιεί το πρόγραμμα.
+
+Οι κλάσεις Professor και Student κληρονομούν την κλάση Person από το Α΄ μέρος της εργασίας, η οποία διατηρεί την πλειοψηφία των ιδιοτήτων της.
+
+Η κλάση Student περιέχει τις πληροφορίες του μαθητή ( εξάμηνο , συνολικά ects points ) καθώς και δομές δεδομένων vector στις οποίες αποθηκεύονται δείκτες 
+τα μαθήματα που επιλέγει ο συγκεκριμένος μαθητής για το τρέχων εξάμηνο, τους βαθμούς του, και τα μαθήματα που έχει περάσει.
+Πληροφορίες για κάθε μέθοδο αυτής της κλάσης καθώς και για την λειτουργία της υπάρχουν στα σχόλια των συναρτήσεων στο αρχείο student.cpp.
+
+Η κλάση Professor περιέχει έναν vector ο οποίος αποθηκεύει δείκτες προς τα μαθήματα τα οποία θα διδάξει στο τρέχων εξάμηνο.
+Πληροφορίες για κάθε μέθοδο αυτής της κλάσης καθώς και για την λειτουργία της υπάρχουν στα σχόλια των συναρτήσεων στο αρχείο professor.cpp.
+
+Η κλάση Course περιέχει τις πληροφορίες του μαθήματος ( όνομα , ects, εξάμηνο, αν είναι υποχρεωτικό ή όχι), έναν δείκτη προς τον καθηγητή ο οποίος 
+θα το διδάξει καθώς και έναν vector ο οποίος περιέχει δείκτες προς τους μαθητές που το επέλεξαν για το τρέχων εξάμηνο.
+Ένα μάθημα μπορεί να το επιλέξει ένας μαθητής σε οποιοδήποτε εξάμηνο βρίσκεται αρκεί να είναι στο ίδιο ή σε μεγαλύτερο από αυτό
+στο οποίο ανήκει το ίδιο το μάθημα.
+Πληροφορίες για κάθε μέθοδο αυτής της κλάσης καθώς και για την λειτουργία της υπάρχουν στα σχόλια των συναρτήσεων στο αρχείο course.cpp.
+
+
+Η κλάση Secretary είναι η σημαντικότερη κλάση του προγράμματός μας. Διαχειρίζεται όλα τα δεδομένα του προγράμματος και συντονίζει τις κλάσεις καλώντας τις μεθόδους τους εντώς των δικών της.
+Για αυτό το λόγο κάθε άλλη κλάση του προγράμματος είναι "friend class secretary"!
+Περιέχει 3 vectors τα οποία περιέχουν αυτούσιες όλες τις κλάσεις του προγράμματος. Τα αντικείμενα αυτά είναι αυτά στα οποία δείχνουν οι δείκτες που χειρίζονται οι υπόλοιπες κλάσεις.
+Ουσιαστικά τα 3 αυτά vectors είναι η βάση του προγράμματος πάνω στην οποία γίνονται όλες οι λειτουργίες του. Επιπλέων περιέχει άλλο ένα vector στο οποίο τοποθετούνται οι απόφοιτοι μαθητές.
+Η Secretary προσθέτει/ διαφοροποιεί/ διαγράφει τους μαθητές/ καθηγητές/ μαθήματα σε αυτό το πρόγραμμα.
+Οι μαθητές, οι καθηγητές και τα μαθήματα φορτώνονται( και αποθηκεύονται) από 3 αντίστοιχα αρχεία που βρίσκονται στο φάκελο database/ .
+Μέσω ορισμένων μεθόδων της Secretary καλούνται οι μέθοδοι των Student και Professor για την επιλογή μαθημάτων.
+Επίσης μέσω της μεθόδου exams() η Secretary εκτελεί τις ακαδημαϊκές εξετάσεις του τρέχοντος εξαμήνου όπου καλώντας την συνάρτηση grade_student() της κλάσης Professor βαθμολογούνται οι μαθητές.
+Στη συγκεκριμένη συνάρτηση μπορεί επίσης να εμφανιστουν όλα τα στατιστικά των εξετάσεων αυτών (είτε κατα καθηγητή, είτε κατα μάθημα, είτε κατα μαθητή).
+Πληροφορίες για κάθε μέθοδο αυτής της κλάσης καθώς και για την λειτουργία της υπάρχουν στα σχόλια των συναρτήσεων στο αρχείο secretary.cpp.
+
+Οδηγίες Χρήστη:
+εκτελέστε τα εξής:
+-make clean
+-make
+-./myprogram
+
+Κάτα την αρχική φόρτωση του προγράμματος ορισμένες λειτουργίες έχουν γίνει αυτόματα για να γλιτώσετε χρόνο και για την διευκόλυνσή σας. H συνάρτηση "scenario()" της κλάσης secreatary κάνει ακριβώς αυτό. Είναι ειδικά φτιαγμένη
+για τους καθηγητές, τους μαθητές και τα μαθήματα που έχουμε ήδη εισάγει στο πρόγραμμα και σκοπός τις είναι να διευκολύνει τη μελέτη των λειτουργιών του προγράμματος. Παρόλα αυτά μπορείται να δοκιμάσετε μόνοι σας οποιαδήποτε λειτουργία του.
+Menu θέλετε ακολουθώντας τις οδηγίες των μυνημάτων του terminal.
+
+Οι λειτουργίες που έχουν ήδη γίνει είναι οι εξής. Έχουν φορτωθεί οι μαθητές, οι καθηγητές και τα μαθήματα που βρίσκονται στα αρχεία του φακέλου database/
+Οι καθηγητές έχουν ανατεθεί όλοι από ένα μάθημα και οι μαθητές έχουν επιλέξει τα μαθήματά τους για το τρέχων εξάμηνο.
+Πατώντας απλώς την 5η επιλογή στο αρχικό Μenu θα αρχίσει η διαδικασία των εξετάσεων και από εκει και πέρα απλώς ακολουθείτε τα βήματα των μυνημάτων.
+Μπορείται αρχικά αν θέλετε να προσθέσετε αντικείμενα μαθητή, καθηγητή ή μαθήματος στο πρόγραμμα και να κάνετε τις ακόλουθες λειτουργίες.
+Δηλαδή για να δείτε τα σωστά αποτελέσματα θα πρέπει (αναλόγως τι αντικείμενο προσθέσατε) να επιλέξει ο μαθητής μάθημα, να ανατεθεί ένα μάθημα στον καθηγητή κτλπ.
+Τα αντικείμενα που προσθέσατε θα λάβυον μέρος κανονικά στη διαδικασία εξετάσεων ( αν δεν γίνουν τα απαραίτητα βήματα τότε θα προβληθεί ανάλογο μύνημα).
+
+Μόλις ολοκληρωθεί η διαδικασία εξετάσεων τότε το πρόγραμμα ξεκινάει από το σημείο μηδέν και μπορείτε να πειραματιστείτε με τις λειτουργίες του.
+
+Παρακαλώ ακολουθείστε πειστά τις οδηγίες των μυνημάτων του terminal γιατι όσο debugging και αν γίνει πάντα θα υπάρχουν τα σιχαμένα bugs!
+
+
+English:
+The assignment is complete with what is required of the pronunciation:
+
+The classes used by the program are found in the classes.hpp file.
+
+The Professor and Student classes inherit the Person class from Part A of the paper, which retains most of its properties.
+
+The Student class contains the student information (semester, total ects points) as well as vector data structures in which pointers are point to
+the courses chosen by the particular student for the current semester, his grades, and the courses he has passed.
+Information on each method of this class as well as on its function can be found in the function comments in the student.cpp file.
+
+The Professor class contains a vector that stores pointers to the courses it will teach in the current semester.
+Information on each method of this class as well as on its function can be found in the function comments in the professor.cpp file.
+
+The Course class contains the course information ( name , ects, semester, if it is compulsory or not), a pointer to the teacher which
+will teach it as well as a vector containing pointers that point to the students who selected it for the current semester.
+A course can be chosen by a student in any semester as long as it is in the same or greater semester as the course.
+Information about each method of this class as well as its operation can be found in the function comments in the course.cpp file.
+
+The Secretary class is the most important class in our program. It manages all program data and coordinates classes by calling their methods within its own.
+For this reason every other class in the program is a "friend class secretary"!
+It contains 3 vectors which contain all the classes of the program. These objects are the ones to which the pointers that the other classes handle point.
+Essentially, these 3 vectors are the basis of the program on which all its functions are performed. It also contains another vector in which the graduating students are placed.
+Secretary adds/edits/deletes students/professors/courses in this program.
+Students, professors and courses are loaded (and saved) from 3 corresponding files located in the database/ folder.
+Through certain Secretary methods the Student and Professor methods are called for course selection.
+Also through the exams() method the Secretary performs the academic exams of the current semester where by calling the grade_student() function of the Professor class all the students are graded.
+Furthermore in the exam() function, all the statistics of these exams can also be displayed (either by professor, by course, or by student).
+Information about each method of this class as well as its function can be found in the function comments in the secretary.cpp file.
+
+User manual:
+Run the following:
+-make clean
+-make
+-./myprogram
+During the initial loading of the program some actions have been done automatically to save time and for your convenience. However, you can perform any of these functions from the
+Menu by following the instructions of the terminal messages.
+
+The operations already done are as follows. The students, teachers and courses located in the files in the database/ folder have been loaded.
+Teachers are all assigned a course and students have chosen their courses for the current semester.
+Simply pressing the 5th option in the main Menu will start the exam process and from there you just follow the steps provided by the terminal messages.
+You can initially ,if you want, add student, teacher or course objects to the program and do the required operations.
+That is (depending on which item you added), in order to see the correct results:
+-the student must choose at least one course
+-assign a course to the teacher etc.
+The objects you added will normally take part in the examination process (if the necessary steps are not taken then a similar message will be displayed).
+
+Once the exam process is completed then the program starts from scratch and you can experiment with its functions.
+
+Please follow the instructions of the terminal messages carefully because no matter how much debugging is done, there will always be the disgusting bugs!

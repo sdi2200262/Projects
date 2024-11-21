@@ -1,0 +1,27 @@
+Για την διευκόλυνση της αξιολόγησης βάλαμε ένα Makefile που διαχειρίζεται τα αρχεία του φακέλου.
+Για τη μεταγλώτιση της εργασίας εκτελείτε στο terminal την εντολή -make και έπειτα για να τρέξει το πρόγραμμα απλά: ./myprogram
+
+
+Γενικά για την εργασία:
+Η κλάση secretary διαχειρίζεται δεδομένα κλάσης person χρησιμοποιώντας τη δομή δεδομένων (STL) vector.
+Για να προστεθούν άτομα στον vector κάνουμε υπερφόρτωση του τελεστή + και κάνουμε s + p;.
+Για την είσοδο δεδομένων και την εκτύπωση του κάνουμε υπερφόρτωση στους τελεστές >> και <<.
+
+Υπάρχουν αναλυτικά σχόλια στα αρχεία της εργασίας που εξηγούν ακριβώς τι κάνει κάθε συνάρτηση.
+
+Χαϊδεμένος Κωνσταντίνος sdi2200262
+
+
+English:
+
+For the ease of evaluation, we have included a Makefile that manages the files in the folder.
+To compile the assignment, run the command make in the terminal, and to execute the program, simply use: ./myprogram.
+
+General Information about the assignment:
+The secretary class manages data from the person class using the STL vector data structure.
+To add people to the vector, we overload the + operator, so you can do s + p;.
+For input and output operations, we overload the >> and << operators.
+
+There are detailed comments in the assignment files that explain exactly what each function does.
+
+Kostas Chaidemenos, sdi2200262
