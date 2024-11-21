@@ -25,7 +25,8 @@ For every line of code there are comments explaining its purpose and its functio
         This project is from the lab exercises from the Numerical Analysis course, 5th semester.
 
         Τhe purpose of the work was to implement some iterative root search methods that we learned in the theoretical part of the course 
-        in matlab programming code. We also had to analyze the results of the functions we made and comment on them based on the theory we have learned in the subject. The results of the code as well as my comments on them are in the word document, however the comments are only available in greek ://
+        in matlab programming code. We also had to analyze the results of the functions we made and comment on them based on the theory we have learned in the subject. 
+        The results of the code as well as my comments on them are in the word document, however the comments are only available in greek ://
 
 
 
