@@ -26,3 +26,8 @@ For every line of code there are comments explaining its purpose and its functio
 
         Τhe purpose of the work was to implement some iterative root search methods that we learned in the theoretical part of the course 
         in matlab programming code. We also had to analyze the results of the functions we made and comment on them based on the theory we have learned in the subject. The results of the code as well as my comments on them are in the word document, however the comments are only available in greek ://
+
+
+
+    - lite_htmling:
+        I've included some lite html work that i've done for school since it was some fun and intresting hw.
